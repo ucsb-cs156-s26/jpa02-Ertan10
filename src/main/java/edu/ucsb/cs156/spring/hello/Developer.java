@@ -18,7 +18,7 @@ public class Developer {
  
 
     public static String getGithubId() {
-        return "A1C5E26";
+        return "Ertan10";
     }
 
    
