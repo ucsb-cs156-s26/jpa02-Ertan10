@@ -29,6 +29,7 @@ public class TeamTest {
     }
 
     @Test
+    public void hashCode(){
     Team t1 = new Team();
     t1.setName("foo");
     t1.addMember("bar");
@@ -36,4 +37,35 @@ public class TeamTest {
     t2.setName("foo");
     t2.addMember("bar");
     assertEquals(t1.hashCode(), t2.hashCode());
+    }
+    
+    @Test
+    public void sameobject() {
+        assertTrue(team.equals(team));
+    }
+
+    @Test
+    public void nonTeamobject() {
+        assertFalse(team.equals("uhuhuh"));
+    }
+
+    @Test
+    public void Differentname() {
+        Team other = new Team("uhuhuh");
+        assertFalse(team.equals(other));
+    }
+
+    @Test
+    public void Differentmembers() {
+        Team other = new Team("s26-04");
+        other.addMember("Mehmet");
+        assertFalse(team.equals(other));
+    }
+
+    @Test
+    public void allsame() {
+        Team other = new Team("test-team");
+        assertTrue(team.equals(other));
+    }
+}
 }
