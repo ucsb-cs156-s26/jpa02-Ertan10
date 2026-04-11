@@ -9,6 +9,13 @@ import org.junit.jupiter.api.Test;
 
 public class TeamTest {
 
+    @Test
+    public void defaultConstructor() {
+        Team t = new Team();
+        assertEquals("", t.getName());
+        assertEquals(0, t.getMembers().size());
+    }
+    
     Team team;
 
     @BeforeEach
@@ -66,5 +73,28 @@ public class TeamTest {
         Team other = new Team("test-team");
         assertTrue(team.equals(other));
     }
+
+    @Test
+    public void addMember_adds_member_to_list() {
+        team.addMember("Mehmet");
+        assertTrue(team.getMembers().contains("Mehmet"));
+    }
+
+    @Test
+    public void setName_changes_name() {
+        team.setName("noname");
+        assertEquals("noname", team.getName());
+    }
+
+    @Test
+    public void setMembers_changes_members() {
+        java.util.ArrayList<String> members = new java.util.ArrayList<>();
+        members.add("Ertan");
+        members.add("Erik");
+
+        team.setMembers(members);
+
+        assertEquals(members, team.getMembers());
+}
 }
 
