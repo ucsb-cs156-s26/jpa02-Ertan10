@@ -28,7 +28,7 @@ public class TeamTest {
         assertEquals("Team(name=test-team, members=[])", team.toString());
     }
 
-
+    @Test
     Team t1 = new Team();
     t1.setName("foo");
     t1.addMember("bar");
