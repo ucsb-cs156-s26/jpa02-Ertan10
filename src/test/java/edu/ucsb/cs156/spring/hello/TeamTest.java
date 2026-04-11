@@ -96,5 +96,15 @@ public class TeamTest {
 
         assertEquals(members, team.getMembers());
 }
+     @Test
+     public void hashCodeexptest() {
+        Team t = new Team();
+        t.setName("foo");
+        t.addMember("bar");
+
+        int result = t.hashCode();
+        int expectedResult = 0;  
+        assertEquals(expectedResult, result);
+}       
 }
 
