@@ -31,7 +31,7 @@ public class TeamTest {
     }
 
     @Test
-    public void hashCode(){
+    public void hashCode_test(){
     Team t1 = new Team();
     t1.setName("foo");
     t1.addMember("bar");
