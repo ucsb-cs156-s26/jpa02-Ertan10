@@ -16,7 +16,7 @@ public class Team {
         this.name = name;
         this.members = new ArrayList<String>();
     }
-    /
+    
     public void addMember(String member) {
         this.members.add(member);
     }
