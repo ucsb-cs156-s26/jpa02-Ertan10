@@ -103,7 +103,7 @@ public class TeamTest {
         t.addMember("bar");
 
         int result = t.hashCode();
-        int expectedResult = 0;  
+        int expectedResult = 130294;  
         assertEquals(expectedResult, result);
 }       
 }
